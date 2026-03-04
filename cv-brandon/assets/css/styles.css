@@ -111,7 +111,7 @@ body.scale-cv{
 }
 
 .scale-cv .section{
-  padding: 1.2rem 0 .6rem;
+  padding: 0.8rem 0 0.5rem;
 }
 
 .scale-cv .section-title{
@@ -124,8 +124,9 @@ body.scale-cv{
 }
 
 .scale-cv .home_img{
-  width: 90px;
-  height: 90px;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
 }
 
 .scale-cv .home_container{
@@ -214,7 +215,7 @@ body.scale-cv{
 /* Improve printing / PDF pagination */
 @page {
   size: A4;
-  margin: 10mm;
+  margin: 8mm;
 }
 
 @media print {
@@ -232,14 +233,26 @@ body.scale-cv{
   }
 
   /* Avoid breaking inside these larger blocks when possible */
-  .section,
-  .education_content,
-  .experience_content,
-  .certificate_contariner,
-  .reference_content {
+  .home,
+  .social,
+  .profile,
+  .education,
+  .certificates {
     page-break-inside: avoid;
     -webkit-column-break-inside: avoid;
     break-inside: avoid;
+  }
+
+  .education_content,
+  .certificate_content {
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Experience puede dividirse entre páginas si es necesario */
+  .experience_content {
+    page-break-inside: auto;
   }
 
   /* Allow skills section to break between pages, but avoid breaking individual bars */
@@ -423,11 +436,13 @@ img {
 }
 
 .home_img {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   justify-self: center;
   margin-bottom: var(--mb-1);
+  object-fit: cover;
+  border: 3px solid var(--container-color-alt);
 }
 
 .home_title{
@@ -496,7 +511,18 @@ img {
 /*========== PROFILE ==========*/
 
 .profile_description{
-  text-align: center;
+  text-align: justify;  /* Justificado como en Word */
+  font-size: var(--small-font-size);
+  line-height: 1.4;
+  margin-bottom: var(--mb-1);
+}
+
+/* Para modo PDF - texto más compacto */
+.scale-cv .profile_description{
+  text-align: justify;  /* Justificado también en PDF */
+  font-size: var(--smaller-font-size);
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
 }
 
 /*========== EDUCATION AND EXPERIENCE ==========*/
