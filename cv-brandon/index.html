@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--========== BOX ICONS ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>CV - Brandon Rodriguez Jimenez</title>
+</head>
+
+<body class="">
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav_logo">Brandon Rodriguez</a>
+            <div class="nav_menu" id="nav-menu">
+                <ul class="nav_list">
+                    <li class="nav_item">
+                        <a href="#home" class="nav_link active-link">
+                            <i class="bx bx-home nav_icon"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#profile" class="nav_link">
+                            <i class="bx bx-user nav_icon"></i>Perfil
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#education" class="nav_link">
+                            <i class="bx bx-book nav_icon"></i>Educación
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#experience" class="nav_link">
+                            <i class="bx bx-receipt nav_icon"></i>Experiencia
+                        </a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="#skills" class="nav_link">
+                            <i class="bx bx-receipt nav_icon"></i>Habilidades
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav_toggle" id="nav-toggle">
+                <i class="bx bx-grid-alt"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main bd-container">
+        <!-- All elements within this div, is generated in PDF -->
+        <div class="resume" id="area-cv">
+            <div class="resume__left">
+                <!--========== HOME ==========-->
+                <section class="home" id="home">
+                    <div class="home_container section bd-grid">
+                        <div class="home_data bd-grid">
+                            <img src="assets/img/perfil.png" alt="Foto Brandon Rodriguez" class="home_img">
+                            <h1 class="home_title">Brandon <b>Rodriguez Jimenez</b></h1>
+                            <h3 class="home_profession">Egresado de Ingeniería en Sistemas Computacionales</h3>
+
+                            <div>
+                                <a download="CV_Brandon-Rodriguez-Jimenez.pdf" href="assets/pdf/CV_Brandon-Rodriguez-Jimenez.pdf"
+                                    class="home_button-movil">Descarga CV</a>
+                            </div>
+                        </div>
+
+                        <div class="home_address bd-grid">
+                            <span class="home_information">
+                                <i class="bx bx-map home_icon"></i>Veracruz, Ver.
+                            </span>
+                            <span class="home_information">
+                                <i class="bx bx-envelope home_icon"></i>brandonrj01@hotmail.com
+                            </span>
+                            <span class="home_information">
+                                <i class="bx bx-phone home_icon"></i>228 603 5293
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Theme change button -->
+                    <i class="bx bx-moon change-theme" title="Theme" id="theme-button"></i>
+
+                    <!-- Button to generate and download the pdf. Available for desktop. -->
+                    <i class="bx bx-download generate-pdf" title="Generar PDF" id="resume-button"></i>
+
+                </section>
+
+                <!--========== SOCIAL ==========-->
+                <section class="social section">
+                    <h2 class="section-title">SOCIAL</h2>
+                    <div class="social_container bd-grid">
+                        <a href="https://www.linkedin.com/in/brandon-rj/" target="_blank" class="social_link">
+                            <i class="bx bxl-linkedin-square social_icon"></i>@BrandonRodriguez
+                        </a>
+                        <a href="https://github.com/TheFallacy" target="_blank" class="social_link">
+                            <i class='bx bxl-github social_icon'></i>@BrandonRodriguez
+                        </a>
+                    </div>
+                </section>
+
+                <!--========== PROFILE ==========-->
+                <section class="profile section" id="profile">
+                    <h2 class="section-title">Sobre Mí</h2>
+                    <p class="profile_description">
+                        Ingeniero en Sistemas Computacionales con experiencia en soporte industrial y actualmente enfocado en el desarrollo 
+                        de soluciones basadas en Inteligencia Artificial. Me especializo en el desarrollo de agentes inteligentes utilizando 
+                        Python, MCP (Model Context Protocol) y Microsoft Agent Framework.
+                    </p>
+                    <p class="profile_description">
+                        Experiencia en backend, integración con bases de datos SQL y construcción de sistemas multi-agente. Me caracterizan 
+                        el pensamiento analítico, la adaptabilidad y la orientación a soluciones innovadoras mediante automatización inteligente.
+                    </p>
+                </section>
+
+                <!--========== EDUCATION ==========-->
+                <section class="education section" id="education">
+                    <h2 class="section-title">Educación</h2>
+
+                    <div class="education_container bd-grid">
+                        <div class="education_content">
+                            <div class="education_time">
+                                <span class="education_rounder"></span>
+                                <span class="education_line"></span>
+                            </div>
+
+                            <div class="education_data bd-grid">
+                                <h3 class="education_title">Ingeniería en Sistemas Computacionales</h3>
+                                <span class="education_studies">Instituto Tecnológico Superior de Xalapa</span>
+                                <span class="education_year">Agosto 2019 - Enero 2025</span>
+                                <span class="education_studies">Egresado (título en trámite)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--========== CERTIFICATIONS ==========-->
+                <section class="certificates section" id="certificates">
+                    <h2 class="section-title">Certificaciones</h2>
+
+                    <div class="certificate_contarner bd-grid">
+                        <div class="certificate_content">
+                            <h3 class="certificate_title">Scrum Fundamentals Certified</h3>
+                            <p class="certificate_description">SCRUMstudy</p>
+                        </div>
+                        <div class="certificate_content">
+                            <h3 class="certificate_title">Desarrollo de Aplicaciones Móviles</h3>
+                            <p class="certificate_description">Google Active</p>
+                        </div>
+                        <div class="certificate_content">
+                            <h3 class="certificate_title">MOOC de Cálculo Integral</h3>
+                            <p class="certificate_description">TecNM</p>
+                        </div>
+                        <div class="certificate_content">
+                            <h3 class="certificate_title">Programación Backend con C# .NET</h3>
+                            <p class="certificate_description">Certificación Backend</p>
+                        </div>
+                        <div class="certificate_content">
+                            <h3 class="certificate_title">Mastering AutoGen: Building Multi-Agent Systems</h3>
+                            <p class="certificate_description">Udemy - 24 Noviembre 2025</p>
+                        </div>
+                        <div class="certificate_content">
+                            <h3 class="certificate_title">Python OOP – Object Oriented Programming</h3>
+                            <p class="certificate_description">Udemy - 18 Noviembre 2025</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="resume__right">
+                <!--========== EXPERIENCE ==========-->
+                <section class="experience section" id="experience">
+                    <h2 class="section-title">Experiencia</h2>
+
+                    <div class="experience_container bd-grid">
+                        <div class="experience_content">
+                            <div class="experience_time">
+                                <span class="experience_rounder"></span>
+                                <span class="experience_line"></span>
+                            </div>
+                            <div class="experience_data bd-grid">
+                                <h3 class="experience_title"><b>Sharksia</b></h3>
+                                <span class="experience_company">Septiembre 2025 - Actualidad (Marzo 2026)</span>
+                                
+                                <h4 style="margin-top: 0.5rem; font-weight: 600;">Fase 1: Soporte Industrial NAFTA L2 (Cliente: Tenaris)</h4>
+                                <span class="experience_company" style="font-size: 0.95rem;">Septiembre 2025 - Noviembre 2025</span>
+                                <p class="experience_description">Soporte y desarrollo de aplicaciones en entornos Natural/ADABAS, Oracle, DataStage y .NET para sistemas industriales de Tenaris.</p>
+                                <p class="experience_description">Ejecución y seguimiento de incidencias productivas en ambientes UNIX/Linux.</p>
+                                <p class="experience_description">Optimización de consultas SQL y mantenimiento de bases de datos Oracle.</p>
+                                <p class="experience_description">Participación en gestión de despliegues y seguimiento de proyectos.</p>
+                                
+                                <h4 style="margin-top: 0.5rem; font-weight: 600;">Fase 2: Área de Desarrollo con Agentes Inteligentes</h4>
+                                <span class="experience_company" style="font-size: 0.95rem;">Noviembre 2025 - Actualidad</span>
+                                <p class="experience_description">Desarrollo de agentes inteligentes utilizando Python como Backend & AI Engineer.</p>
+                                <p class="experience_description">Implementación y manejo de MCP (Model Context Protocol) para orquestación y gestión de contexto en agentes.</p>
+                                <p class="experience_description">Construcción de sistemas multi-agente utilizando Microsoft Agent Framework.</p>
+                                <p class="experience_description">Integración de agentes con bases de datos SQL y diseño de arquitecturas orientadas a automatización inteligente.</p>
+                                <p class="experience_description">Implementación de APIs REST para interacción con modelos de IA y manejo estructurado de prompts, memoria y contexto conversacional.</p>
+                                <p class="experience_description">Aplicación de principios de programación orientada a objetos (OOP) en proyectos de IA.</p>
+                            </div>
+                        </div>
+
+                        <div class="experience_content">
+                            <div class="experience_time">
+                                <span class="experience_rounder"></span>
+                                <span class="experience_line"></span>
+                            </div>
+                            <div class="experience_data bd-grid">
+                                <h3 class="experience_title">Tenaris Tamsa</h3>
+                                <span class="experience_company">Agosto 2024 - Agosto 2025</span>
+                                <p class="experience_description">IT SERVICE & SUPPORT CA - LEGACIES</p>
+                                <p class="experience_description">Soporte técnico en aplicaciones industriales de Natural en entornos UNIX/Linux.</p>
+                                <p class="experience_description">Gestión y optimización de scripts SQL para mantenimiento de bases de datos.</p>
+                                <p class="experience_description">Integración y despliegue mediante Azure DevOps: configuración de ramas, pipelines y despliegues a producción.</p>
+                                <p class="experience_description">Desarrollo de dashboards en Power BI y apps internas con Power Apps y Power Automate.</p>
+                                <p class="experience_description">Ejecución y monitoreo de procesos batch en Linux usando Bruno y Swagger.</p>
+                                <p class="experience_description">Gestión de solicitudes de pedido, HES y liberación de documentos mediante SAP (Ciclo pasivo L1).</p>
+                            </div>
+                        </div>
+
+                        <div class="experience_content">
+                            <div class="experience_time">
+                                <span class="experience_rounder"></span>
+                                <span class="experience_line"></span>
+                            </div>
+                            <div class="experience_data bd-grid">
+                                <h3 class="experience_title">Torneo estatal de prototipos tecnológicos</h3>
+                                <span class="experience_company">Desarrollo de web (Enero 2023 - Julio 2023)</span>
+                                <p class="experience_description">Desarrollo de un sitio web a fin de software/multimedia (Th3 CODE) donde se obtuvo el segundo lugar.</p>
+                            </div>
+                        </div>
+
+                        <div class="experience_content">
+                            <div class="experience_time">
+                                <span class="experience_rounder"></span>
+                            </div>
+                            <div class="experience_data bd-grid">
+                                <h3 class="experience_title">"Educakids" - Business TECXA</h3>
+                                <span class="experience_company">Desarrollo de Aplicación móvil (Julio 2022 - Junio 2023)</span>
+                                <p class="experience_description">Desarrollo de aplicación educativa enfocada en el aprendizaje infantil. Presentada en el evento "Business TECXA".</p>
+                            </div>
+                        </div>
+
+                        <div class="experience_content">
+                            <div class="experience_time">
+                                <span class="experience_rounder"></span>
+                            </div>
+                            <div class="experience_data bd-grid">
+                                <h3 class="experience_title">Desarrollo de Aplicación móvil</h3>
+                                <span class="experience_company">Julio 2023 - Febrero 2024</span>
+                                <p class="experience_description">Análisis y diseño de una app móvil financiada por la SSP de Veracruz. En etapa de desarrollo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--========== SKILLS ==========-->
+                <section class="skills section" id="skills">
+                    <h2 class="section-title">Competencias Técnicas</h2>
+
+                    <div class="skills_content bd-grid">
+                        <ul class="skills_data">
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bxl-python'></i>Python (Enfoque principal)
+                                </li>
+                                <div class="progress_line python">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-code-curly'></i>C#
+                                </li>
+                                <div class="progress_line csharp">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bxl-c-plus-plus'></i>C++
+                                </li>
+                                <div class="progress_line cpp">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-code-block'></i>.NET
+                                </li>
+                                <div class="progress_line dotnet">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-data'></i>SQL
+                                </li>
+                                <div class="progress_line sql">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </ul>
+
+                        <ul class="skills_data">
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-brain'></i>Desarrollo de Agentes Inteligentes
+                                </li>
+                                <div class="progress_line ai_agents">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-chip'></i>MCP (Model Context Protocol)
+                                </li>
+                                <div class="progress_line mcp">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-bot'></i>Microsoft Agent Framework
+                                </li>
+                                <div class="progress_line msagent">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-network-chart'></i>AutoGen (Multi-Agent Systems)
+                                </li>
+                                <div class="progress_line autogen">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-server'></i>APIs REST en Python
+                                </li>
+                                <div class="progress_line rest_api">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-data'></i>Bases de datos (Oracle, MySQL, SQL Server)
+                                </li>
+                                <div class="progress_line databases">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </section>
+
+                <!--========== CLOUD & DEVOPS ==========-->
+                <section class="skills section">
+                    <h2 class="section-title">Cloud & DevOps</h2>
+
+                    <div class="skills_content bd-grid">
+                        <ul class="skills_data">
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bxl-microsoft'></i>Azure DevOps
+                                </li>
+                                <div class="progress_line azure_devops">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bxl-git'></i>Git
+                                </li>
+                                <div class="progress_line git">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-git-branch'></i>CI/CD
+                                </li>
+                                <div class="progress_line cicd">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </ul>
+
+                        <ul class="skills_data">
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-chart'></i>Power BI
+                                </li>
+                                <div class="progress_line powerbi">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-grid-alt'></i>Power Apps
+                                </li>
+                                <div class="progress_line powerapps">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-refresh'></i>Power Automate
+                                </li>
+                                <div class="progress_line powerautomate">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </section>
+
+                <!--========== PROFESSIONAL SKILLS ==========-->
+                <section class="skills section">
+                    <h2 class="section-title">Habilidades y Aptitudes</h2>
+
+                    <div class="skills_content bd-grid">
+                        <ul class="skills_data">
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-bulb'></i>Autodidacta, adaptable y proactivo
+                                </li>
+                                <div class="progress_line autodidacta">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-brain'></i>Pensamiento analítico y orientación a la mejora continua
+                                </li>
+                                <div class="progress_line analytical">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-group'></i>Trabajo en equipo y comunicación eficaz
+                                </li>
+                                <div class="progress_line teamwork">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </ul>
+
+                        <ul class="skills_data">
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-devices'></i>Herramientas: Bruno, Swagger
+                                </li>
+                                <div class="progress_line tools">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-data'></i>Big Data (en aprendizaje)
+                                </li>
+                                <div class="progress_line bigdata">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="skills_name">
+                                    <i class='bx bx-chip'></i>Data Stage: NIFI
+                                </li>
+                                <div class="progress_line datastage">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </section>
+
+                <!--========== LANGUAGES ==========-->
+                <section class="languages section">
+                    <h2 class="section-title">Idiomas</h2>
+
+                    <div class="languanges_container">
+                        <ul class="langunges_content bd-grid">
+                            <div class="bar">
+                                <li class="languages_name">
+                                    <span class="languages_circle"></span>Español (Nativo)
+                                </li>
+                                <div class="progress_line español">
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="bar">
+                                <li class="languages_name">
+                                    <span class="languages_circle"></span>Inglés (Nivel B1)
+                                </li>
+                                <div class="progress_line ingles">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-up-arrow-alt scrolltop_icon'></i>
+    </a>
+
+    <!--========== HTML2PDF ==========-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

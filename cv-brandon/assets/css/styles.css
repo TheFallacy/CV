@@ -1,0 +1,828 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --title-color: #0B0A0A;
+  --text-color: #403A3A;
+  --text-color-light: #707070;
+  --container-color: #FAFAFA;
+  --container-color-alt: #F0EFEF;
+  --body-color: #FCFCFC;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes ==========*/
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== BASE ==========*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*========== Variables Dark theme ==========*/
+
+body.dark-theme{
+  --title-color: #F2F2F2;
+  --text-color: #BFBFBF;
+  --container-color: #212121;
+  --container-color-alt: #181616;
+  --body-color: #2B2B2B;
+
+}
+
+/*========== Button Dark/Light ==========*/
+
+.change-theme{
+  position: absolute;
+  right: 0;
+  top: 2.2rem;
+  display: flex;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.change-theme:hover{
+  color: var(--title-color);
+}
+
+/*========== Font size variables to scale cv ==========*/
+body.scale-cv{
+  --h1-font-size: .938rem;
+  --h2-font-size: .938rem;
+  --h3-font-size: .875rem;
+  --normal-font-size: .813rem;
+  --small-font-size: .75rem;
+  --smaller-font-size: .688rem;
+}
+
+/*========== Generate PDF button ==========*/
+
+.generate-pdf{
+ display: none; 
+ position: absolute;
+ top: 2.2rem;
+ left: 0;
+ font-size: 1.2rem;
+ color: var(--text-color);
+ cursor: pointer;
+}
+
+.generate-pdf:hover{
+  color: var(--title-color);
+}
+
+/*========== Classes modified to reduce size and print on A4 sheet ==========*/
+.scale-cv .change-theme,
+.scale-cv .generate-pdf{
+  display: none;
+}
+
+.scale-cv .bd-container{
+  max-width: 595px;
+}
+
+.scale-cv .section{
+  padding: 1.2rem 0 .6rem;
+}
+
+.scale-cv .section-title{
+  margin-bottom: .75rem;
+}
+
+.scale-cv .resume__left,
+.scale-cv .resume__right{
+  padding: 0 .9rem;
+}
+
+.scale-cv .home_img{
+  width: 90px;
+  height: 90px;
+}
+
+.scale-cv .home_container{
+  gap: 1.5rem;
+}
+
+.scale-cv .home_data{
+  gap: .25rem;
+}
+
+.scale-cv .home_address,
+.scale-cv .social_container{
+  gap: .75rem;
+}
+
+.scale-cv .home_icon,
+.scale-cv .social_icon,
+.scale-cv .interests_icon{
+  font-size:  1rem ;
+}
+
+.scale-cv .education_container,
+.scale-cv .experience_container,
+.scale-cv .certificate_contariner{
+  gap: 1rem;
+}
+
+.scale-cv .education_time,
+.scale-cv .experience_time{
+  padding-right: .5rem;
+}
+.scale-cv .experience_rounder,
+.scale-cv .education_rounder{
+  width: 11px;
+  height: 11px;
+  margin-top: .22rem;
+}
+
+.scale-cv .education_line, 
+.scale-cv .experience_line{
+  width: 1px;
+  height: 110%;  
+  animation: none;
+  transform: translate(5px, 0);
+}
+
+.scale-cv .education_data,
+.scale-cv .experience_data{
+  gap: .25rem;
+}
+
+.scale-cv .skills_name{
+  margin-bottom: var(--mb-1);
+}
+
+.scale-cv .interests_container{
+  column-gap: 2.5rem;
+}
+
+.scale-cv .bar .progress_line{
+  transform: scaleX(1);
+  animation: none;
+}
+
+
+.scale-cv .bar .progress_line span{  
+  transform: scaleX(1);
+  animation: none;
+}
+
+.scale-cv .education{
+  margin-bottom: 24px;
+}
+
+/* Slightly narrower progress bars when scaling to PDF to save vertical space */
+.scale-cv .bar .progress_line{
+  max-width: 105px;
+  min-width: 95px;
+  height: 6px;
+}
+
+.scale-cv .bar .progress_line span{
+  height: 100%;
+}
+
+/* Improve printing / PDF pagination */
+@page {
+  size: A4;
+  margin: 10mm;
+}
+
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  /* Ensure container fits printable area */
+  .bd-container {
+    max-width: 190mm;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Avoid breaking inside these larger blocks when possible */
+  .section,
+  .education_content,
+  .experience_content,
+  .certificate_contariner,
+  .reference_content {
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Allow skills section to break between pages, but avoid breaking individual bars */
+  .bar,
+  .bar .progress_line,
+  .skills_content .bar {
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Respect explicit page breaks */
+  .page-break { page-break-before: always; }
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*========== CLASS CSS ==========*/
+.page-break {
+  page-break-before: always;
+}
+
+.section {
+  padding: 1.5rem 0;
+}
+
+.section-title {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  letter-spacing: .35rem;
+  text-align: center;
+  margin-bottom: var(--mb-3)
+}
+
+/*========== LAYOUT ==========*/
+.bd-container {
+  max-width: 968px;
+  width: calc(100% - 3rem);
+  margin-left: var(--mb-3);
+  margin-right: var(--mb-3);
+}
+
+.bd-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
+  transition: .3s;
+}
+
+/*========== NAV ==========*/
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 969px) {
+  .nav_menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+    border-radius: 1rem 1rem 0 0;
+    z-index: var(--z-fixed);
+    transition: .3s;
+  }
+}
+
+.nav_logo,
+.nav_toggle {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav_toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.nav_item {
+  text-align: center;
+}
+
+.nav_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 1.5rem;
+}
+
+.nav_link {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  font-weight: var(--font-medium);
+}
+
+.nav_link:hover {
+  color: var(--title-color);
+}
+
+.nav_icon {
+  font-size: 1.2rem;
+  margin-bottom: var(--mb-1);
+}
+/* Show menu */
+.show-menu {
+  bottom: var(--header-height);
+}
+
+/* Active menu link */
+.active-link {
+  color: var(--title-color);
+}
+
+/*========== HOME ==========*/
+.home {
+  position: relative;
+}
+
+.home_container {
+  gap: 3rem;
+}
+
+.home_data {
+  gap: .5rem;
+  text-align: center;
+}
+
+.home_img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  justify-self: center;
+  margin-bottom: var(--mb-1);
+}
+
+.home_title{
+  font-size: var(--h1-font-size);
+}
+
+.home_profession{
+  font-size: var(--normal-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.home_address{
+  gap: 1rem;
+}
+
+.home_information{
+  display: flex;
+  align-items: center;
+  font-size: var(--small-font-size);
+}
+
+.home_icon{
+  font-size: 1.2rem;
+  margin-right: .25rem;
+}
+
+.home_button-movil{
+  display: inline-block;
+  border: 2px solid var(--text-color);
+  color: var(--title-color);
+  padding: 1rem 2rem;
+  border-radius: .25rem;
+  transition: .3s;
+  font-weight: var(--font-medium);
+  margin-top: var(--mb-3);
+}
+
+.home_button-movil:hover{
+  background-color: var(--text-color);
+  color: var(--container-color);
+}
+
+/*========== SOCIAL ==========*/
+
+.social_container{
+  grid-template-columns: max-content;
+  gap: 1rem;
+}
+
+.social_link{
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+.social_link:hover{
+  color: var(--title-color);
+}
+
+.social_icon{
+  font-size: 1.2rem;
+  margin-right: .25rem;
+}
+
+/*========== PROFILE ==========*/
+
+.profile_description{
+  text-align: center;
+}
+
+/*========== EDUCATION AND EXPERIENCE ==========*/
+
+.education_content,
+.experience_content {
+  display: flex;
+}
+
+.education_time,
+.experience_time{
+  padding-right: 1rem;
+}
+
+.education_rounder,
+.experience_rounder{
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: var(--text-color-light);
+  border-radius: 50%;
+  margin-top: .5rem;
+}
+
+.education_line,
+.experience_line{
+  display: block;
+  width: 2px;
+  height: 110%;
+  background-color: var(--text-color-light);
+  animation: animateLine 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleY(0) translate(7px, 0);
+  transform-origin: top;
+}
+
+@keyframes animateLine {
+  100%{
+    transform: scaleY(1) translate(7px, 0);
+  }
+}
+
+.education_data,
+.experience_data{
+  gap: .5rem;
+}
+
+.education_title,
+.experience_title{
+  font-size: var(--h3-font-size);
+}
+
+.education_studies,
+.experience_company{
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.education_year{
+  font-size: var(--smaller-font-size);
+}
+
+/*========== SKILLS AND LANGUAGES ==========*/
+
+.skills_content,
+.langunges_content {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.langunges_content{
+  gap: 0;
+  display: grid;
+}
+
+.languages_name{
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-1);
+}
+
+.skills_name{
+  margin-bottom: var(--mb-1);
+}
+
+.skills_circle,
+.languages_circle{
+  display: inline-block;
+  margin-right: .7rem;
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+}
+
+.bar .bx{
+  margin-right: .4rem;
+}
+
+.skills_content .bar{
+  margin: var(--mb-1) 0;
+}
+
+.bar:first-child{
+  margin-top: 0;
+}
+
+.bar:last-child{
+  margin-bottom: 0;
+}
+
+.bar .progress_line{
+  position: relative;
+  border-radius: 10px;
+  max-width: 115px;
+  min-width: 100px;
+  height: 6px;
+  background-color: var(--text-color-light); 
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+
+.bar .progress_line span{
+  height: 100%;
+  background-color: var(--container-color-alt);
+  position: absolute;
+  height: 4px;
+  border-radius: 10px;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/*========== PROGRESS BAR WIDTHS - LENGUAJES ==========*/
+.progress_line.python span { width: 80%; }
+.progress_line.csharp span { width: 65%; }
+.progress_line.cpp span { width: 65%; }
+.progress_line.dotnet span { width: 70%; }
+.progress_line.javascript span { width: 60%; }
+.progress_line.sql span { width: 90%; }
+
+/*========== PROGRESS BAR WIDTHS - IA & AGENTS ==========*/
+.progress_line.ai_agents span { width: 70%; }
+.progress_line.mcp span { width: 70%; }
+.progress_line.msagent span { width: 70%; }
+.progress_line.autogen span { width: 70%; }
+.progress_line.rest_api span { width: 70%; }
+.progress_line.databases span { width: 85%; }
+
+/*========== PROGRESS BAR WIDTHS - CLOUD & DEVOPS ==========*/
+.progress_line.azure_devops span { width: 30%; }
+.progress_line.git span { width: 85%; }
+.progress_line.cicd span { width: 70%; }
+.progress_line.powerbi span { width: 80%; }
+.progress_line.powerapps span { width: 75%; }
+.progress_line.powerautomate span { width: 60%; }
+
+/*========== PROGRESS BAR WIDTHS - SOFT SKILLS ==========*/
+.progress_line.autodidacta span { width: 95%; }
+.progress_line.analytical span { width: 90%; }
+.progress_line.teamwork span { width: 85%; }
+.progress_line.tools span { width: 75%; }
+.progress_line.bigdata span { width: 60%; }
+.progress_line.datastage span { width: 50%; }
+
+/*========== LENGUAGUES ==========*/
+.progress_line.español span { width: 100%; }
+.progress_line.ingles span { width: 65%; }
+
+/*========== CERTIFICATES ==========*/
+
+.certificate_title{
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.certificate_description{
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+/*========== REFERENCES ==========*/
+
+.reference_content{
+  gap: .25rem;
+}
+
+.reference_subtitle{
+  color: var(--text-color-light);
+}
+
+.reference_subtitle,
+.reference_contact{
+  font-size: var(--smaller-font-size);
+}
+
+.reference_tile{
+  font-size: var(--h3-font-size);
+}
+
+/*========== INTERESTS ==========*/
+.interests_container{
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: var(--mb-2);
+}
+
+.interests_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interests_icon{
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+  margin-bottom: .25rem;
+}
+
+/* Scroll top */
+.scrolltop{
+  position: fixed;
+  right: 1rem;
+  bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .3rem;
+  background-color: var(--container-color-alt);
+  border-radius: .4rem;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+  visibility: hidden;
+}
+
+.scrolltop_icon{
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.show-scroll{
+  visibility: visible;
+  bottom: 5rem;
+}
+
+/*========== MEDIA QUERIES ==========*/
+/* For small devices, menu two columns */
+@media screen and (max-width: 320px) {
+  .nav_list{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem .5rem;
+  }  
+}
+
+
+/* Classes modified for large screen size */
+@media screen and (min-width: 968px) {
+  body{
+    margin: 3rem 0;
+  }
+
+  .bd-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .l-header,
+  .scrolltop{
+    display: none;
+  }
+
+  .resume{
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    background-color: var(--container-color);
+    box-shadow: 0 0 9px rgba(13, 12, 12, .15);
+  }
+
+  .resume__left{
+    background-color: var(--container-color-alt);
+  }
+
+  .resume__left,
+  .resume__right{
+    padding: 0 1.5rem ;
+  }
+
+  .generate-pdf{
+    display: inline-block;
+   }
+
+  .section-title,
+  .profile_description{
+    text-align: initial;
+  }
+
+  .home_container{
+    gap: 1.5rem;
+  }
+
+  .home_button-movil{
+    display: none;
+  }
+
+  .skills_content .bar .progress_line{
+    max-width: 135px;
+    min-width: 115px;
+  }
+
+  .reference_container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .langunges_content{
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 3.5rem;
+  }
+
+  .interests_container{
+    grid-template-columns: repeat(4,max-content);
+    column-gap: 3.5rem;
+  }
+}
