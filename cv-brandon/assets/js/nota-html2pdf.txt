@@ -1,8 +1,0 @@
-<!-- 
-NOTA: Este archivo no es necesario en el proyecto final.
-El index.html ya incluye la referencia a html2pdf desde el CDN.
-
-Para que el PDF funcione correctamente, asegúrate de tener conexión a internet.
-La librería se carga desde:
-https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js
--->
