@@ -18,9 +18,9 @@
   --font-serif: 'EB Garamond', Georgia, 'Times New Roman', serif;
   --font-sans:  'DM Sans', system-ui, sans-serif;
 
-  --page-max:   780px;
-  --page-pad-v: 3rem;
-  --page-pad-h: 3.5rem;
+  --page-max:   1300px;
+  --page-pad-v: 3.5rem;
+  --page-pad-h: 5rem;
 }
 
 body.dark-theme {
@@ -45,8 +45,8 @@ ul { list-style: none; }
 
 body {
   font-family: var(--font-serif);
-  font-size: 15.5px;
-  line-height: 1.55;
+  font-size: 17px;
+  line-height: 1.6;
   color: var(--text);
   background: var(--bg);
   padding-top: 52px;
@@ -115,7 +115,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 2.5rem 1rem 4rem;
+  padding: 2rem 2rem 4rem;
 }
 
 .resume {
@@ -132,12 +132,12 @@ body {
    ============================================= */
 .cv-header {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .cv-name {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: 2.6rem;
   font-weight: 700;
   color: var(--text);
   line-height: 1.15;
@@ -146,20 +146,20 @@ body {
 
 .cv-title {
   font-family: var(--font-sans);
-  font-size: .78rem;
+  font-size: .85rem;
   font-weight: 400;
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin-top: .3rem;
+  margin-top: .35rem;
   font-style: normal;
 }
 
 .cv-contact {
   font-family: var(--font-sans);
-  font-size: .8rem;
+  font-size: .88rem;
   color: var(--text-soft);
-  margin-top: .55rem;
+  margin-top: .6rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -169,7 +169,7 @@ body {
 }
 
 .cv-contact .sep {
-  margin: 0 .35rem;
+  margin: 0 .4rem;
   opacity: .45;
 }
 
@@ -179,26 +179,26 @@ body {
 .cv-rule {
   border: none;
   border-top: 1.5px solid var(--rule);
-  margin: 1rem 0;
+  margin: 1.1rem 0;
 }
 
 /* =============================================
    SECTIONS
    ============================================= */
 .cv-section {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.6rem;
 }
 
 .cv-section-title {
   font-family: var(--font-serif);
-  font-size: .84rem;
+  font-size: .9rem;
   font-weight: 700;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--text);
   border-bottom: 1px solid var(--rule);
-  padding-bottom: .25rem;
-  margin-bottom: .85rem;
+  padding-bottom: .28rem;
+  margin-bottom: 1rem;
   font-style: normal;
 }
 
@@ -206,7 +206,7 @@ body {
    ENTRIES
    ============================================= */
 .cv-entry {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .cv-entry:last-child { margin-bottom: 0; }
@@ -219,10 +219,9 @@ body {
   gap: 1rem;
 }
 
-/* Org: bold, no cursiva */
 .cv-entry-org {
   font-family: var(--font-serif);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
   font-style: normal;
   color: var(--text);
@@ -230,17 +229,16 @@ body {
 
 .cv-entry-location {
   font-family: var(--font-sans);
-  font-size: .76rem;
+  font-size: .82rem;
   color: var(--text-muted);
   white-space: nowrap;
   flex-shrink: 0;
   font-style: normal;
 }
 
-/* Role: normal weight, SIN cursiva */
 .cv-entry-role {
   font-family: var(--font-serif);
-  font-size: .95rem;
+  font-size: 1.02rem;
   font-weight: 400;
   font-style: normal;
   color: var(--text-soft);
@@ -248,7 +246,7 @@ body {
 
 .cv-entry-date {
   font-family: var(--font-sans);
-  font-size: .74rem;
+  font-size: .8rem;
   color: var(--text-muted);
   white-space: nowrap;
   flex-shrink: 0;
@@ -259,18 +257,18 @@ body {
    BULLETS
    ============================================= */
 .cv-bullets {
-  margin-top: .4rem;
+  margin-top: .45rem;
   padding-left: 1.2rem;
 }
 
 .cv-bullets li {
   position: relative;
   padding-left: .9rem;
-  margin-bottom: .22rem;
-  font-size: .93rem;
+  margin-bottom: .25rem;
+  font-size: 1rem;
   font-style: normal;
   color: var(--text-soft);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .cv-bullets li::before {
@@ -280,7 +278,6 @@ body {
   color: var(--text-muted);
 }
 
-/* Sin cursiva en <em> dentro de bullets (certificaciones) */
 .cv-bullets li em {
   font-style: normal;
   font-weight: 600;
@@ -292,24 +289,24 @@ body {
 .cv-skills {
   display: flex;
   flex-direction: column;
-  gap: .3rem;
+  gap: .36rem;
 }
 
 .cv-skill-row {
   display: flex;
   align-items: baseline;
-  font-size: .93rem;
-  line-height: 1.45;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .cv-skill-row dt {
   font-family: var(--font-sans);
-  font-size: .75rem;
+  font-size: .8rem;
   font-weight: 700;
   letter-spacing: .04em;
   text-transform: uppercase;
   color: var(--text);
-  min-width: 9rem;
+  min-width: 10.5rem;
   flex-shrink: 0;
   font-style: normal;
 }
@@ -330,19 +327,19 @@ body.scale-cv .resume {
   max-width: 100%;
   padding: 1.8rem 2.2rem;
 }
-body.scale-cv .cv-name              { font-size: 1.55rem; }
-body.scale-cv .cv-title             { font-size: .7rem; }
-body.scale-cv .cv-contact           { font-size: .72rem; }
-body.scale-cv .cv-section-title     { font-size: .74rem; }
-body.scale-cv .cv-entry-org         { font-size: .9rem; }
-body.scale-cv .cv-entry-role        { font-size: .84rem; }
+body.scale-cv .cv-name              { font-size: 1.6rem; }
+body.scale-cv .cv-title             { font-size: .71rem; }
+body.scale-cv .cv-contact           { font-size: .73rem; }
+body.scale-cv .cv-section-title     { font-size: .75rem; }
+body.scale-cv .cv-entry-org         { font-size: .92rem; }
+body.scale-cv .cv-entry-role        { font-size: .86rem; }
 body.scale-cv .cv-entry-location,
-body.scale-cv .cv-entry-date        { font-size: .68rem; }
-body.scale-cv .cv-bullets li        { font-size: .8rem; margin-bottom: .1rem; }
-body.scale-cv .cv-skill-row         { font-size: .8rem; }
-body.scale-cv .cv-skill-row dt      { font-size: .68rem; min-width: 7.5rem; }
+body.scale-cv .cv-entry-date        { font-size: .69rem; }
+body.scale-cv .cv-bullets li        { font-size: .81rem; margin-bottom: .1rem; }
+body.scale-cv .cv-skill-row         { font-size: .81rem; }
+body.scale-cv .cv-skill-row dt      { font-size: .69rem; min-width: 7.5rem; }
 body.scale-cv .cv-section           { margin-bottom: .9rem; }
-body.scale-cv .cv-entry             { margin-bottom: .7rem; }
+body.scale-cv .cv-entry             { margin-bottom: .72rem; }
 body.scale-cv .cv-rule              { margin: .65rem 0; }
 
 @page { size: A4; margin: 10mm; }
@@ -358,12 +355,12 @@ body.scale-cv .cv-rule              { margin: .65rem 0; }
 /* =============================================
    RESPONSIVE
    ============================================= */
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   :root {
     --page-pad-v: 2rem;
-    --page-pad-h: 1.4rem;
+    --page-pad-h: 2rem;
   }
-  .page-wrapper { padding: 1rem .4rem 3rem; }
+  .page-wrapper { padding: 1rem .5rem 3rem; }
   .cv-entry-header,
   .cv-entry-subheader { flex-direction: column; gap: .05rem; }
   .cv-skill-row { flex-direction: column; gap: .05rem; }
