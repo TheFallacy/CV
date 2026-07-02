@@ -203,6 +203,16 @@ body {
 }
 
 /* =============================================
+   SUMMARY
+   ============================================= */
+.cv-summary {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+  text-align: justify;
+}
+
+/* =============================================
    ENTRIES
    ============================================= */
 .cv-entry {
@@ -335,6 +345,7 @@ body.scale-cv .cv-entry-org         { font-size: .92rem; }
 body.scale-cv .cv-entry-role        { font-size: .86rem; }
 body.scale-cv .cv-entry-location,
 body.scale-cv .cv-entry-date        { font-size: .69rem; }
+body.scale-cv .cv-summary           { font-size: .83rem; }
 body.scale-cv .cv-bullets li        { font-size: .81rem; margin-bottom: .1rem; }
 body.scale-cv .cv-skill-row         { font-size: .81rem; }
 body.scale-cv .cv-skill-row dt      { font-size: .69rem; min-width: 7.5rem; }
