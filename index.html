@@ -16,6 +16,9 @@
     <span class="toolbar__name">Brandon Rodriguez</span>
     <div class="toolbar__actions">
         <button class="toolbar__btn" id="theme-button" title="Cambiar tema">◐</button>
+        <button class="toolbar__btn" id="print-button" title="Imprimir / Guardar como PDF (texto seleccionable)">
+            ⎙ PDF con texto
+        </button>
         <button class="toolbar__btn toolbar__btn--primary" id="resume-button" title="Descargar PDF">
             ↓ Descargar CV
         </button>
@@ -28,7 +31,7 @@
     <!-- HEADER -->
     <header class="cv-header">
         <h1 class="cv-name">Brandon Rodriguez Jimenez</h1>
-        <p class="cv-title">Ingeniero en Sistemas Computacionales &nbsp;|&nbsp; Backend &amp; AI Engineer</p>
+        <p class="cv-title">Backend Software Engineer &nbsp;|&nbsp; Python, APIs &amp; AI Agent Systems</p>
         <div class="cv-contact">
             <span>Veracruz, Ver.</span>
             <span class="sep">•</span>
@@ -72,47 +75,79 @@
         <div class="cv-entry">
             <div class="cv-entry-header">
                 <span class="cv-entry-org">Sharksia</span>
-                <span class="cv-entry-location">Septiembre 2025 &ndash; Actualidad</span>
+                <span class="cv-entry-location">Remoto</span>
             </div>
             <div class="cv-entry-subheader">
-                <span class="cv-entry-role">Fase 1: Soporte Industrial NAFTA L2 &mdash; Cliente: Tenaris</span>
-                <span class="cv-entry-date">Sep 2025 &ndash; Nov 2025</span>
+                <span class="cv-entry-role">Analista Desarrollador Jr</span>
+                <span class="cv-entry-date">Agosto 2025 &ndash; Actualidad</span>
+            </div>
+            <div class="cv-entry-subheader" style="margin-top:.4rem">
+                <span class="cv-entry-role">Fase 1: Soporte Especializado L2 &mdash; Cliente: Tenaris</span>
+                <span class="cv-entry-date">Ago 2025 &ndash; Nov 2025</span>
             </div>
             <ul class="cv-bullets">
-                <li>Soporte y desarrollo de aplicaciones en entornos Natural/ADABAS, Oracle, DataStage y .NET para sistemas industriales de Tenaris.</li>
-                <li>Ejecución y seguimiento de incidencias productivas en ambientes UNIX/Linux.</li>
-                <li>Optimización de consultas SQL y mantenimiento de bases de datos Oracle.</li>
-                <li>Participación en gestión de despliegues y seguimiento de proyectos.</li>
+                <li>Brindé soporte especializado (L2) a aplicaciones industriales legacy en UNIX y .NET, aplicando cambios directos de backend y frontend sobre los sistemas del cliente.</li>
+                <li>Implementé un flujo de notificaciones basado en Kafka y Apache NiFi, incluyendo el desarrollo de logging estructurado en .NET para la recepción y trazabilidad de eventos.</li>
+                <li>Mantuve y evolucioné sistemas industriales con bases de datos Oracle SQL y PostgreSQL.</li>
+                <li>Gestioné ramas, pipelines y releases de despliegue mediante Azure DevOps para los sistemas del cliente.</li>
             </ul>
             <div class="cv-entry-subheader" style="margin-top:.7rem">
-                <span class="cv-entry-role">Fase 2: Desarrollo con Agentes Inteligentes &mdash; Backend &amp; AI Engineer</span>
+                <span class="cv-entry-role">Fase 2: Desarrollo con Agentes Inteligentes &mdash; Backend &amp; AI Engineer &mdash; Cliente: Ternium</span>
                 <span class="cv-entry-date">Nov 2025 &ndash; Actualidad</span>
             </div>
             <ul class="cv-bullets">
-                <li>Diseño y desarrollo de sistemas multi-agente en Python con Microsoft Agent Framework (MAF) y AutoGen, orientados a la automatización inteligente de procesos de negocio.</li>
+                <li>Diseño y desarrollo de sistemas multi-agente en Python con Microsoft Agent Framework (MAF), AutoGen y LangGraph, incluyendo integración de LLMs en los flujos que lo requieren.</li>
                 <li>Implementación de servidores y clientes MCP (Model Context Protocol) para orquestación de herramientas y gestión de contexto entre agentes.</li>
-                <li>Desarrollo de APIs REST con FastAPI y Pydantic para exponer capacidades de agentes e integrarlas con modelos de IA.</li>
-                <li>Integración con servicios de Azure (Blob Storage, OneLake) y bases de datos SQL para persistencia, consumo y procesamiento de datos.</li>
-                <li>Manejo estructurado de prompts, memoria y contexto conversacional, aplicando principios de OOP y buenas prácticas de arquitectura.</li>
+                <li>Desarrollo de endpoints y APIs con FastAPI para comunicación externa entre agentes y sistemas del cliente.</li>
+                <li>Integración con Azure Blob Storage, Microsoft Fabric - OneLake para ingesta y trazabilidad de datos.</li>
+                <li>Trabajo con múltiples motores de base de datos (Cosmos DB, MySQL, PostgreSQL, MongoDB) según los requerimientos de cada proyecto.</li>
+                <li>Validación de endpoints en distintos ambientes mediante SoapUI y Postman.</li>
+                <li>Gestión de releases, despliegues de pipelines mediante Azure DevOps.</li>
+            </ul>
+        </div>
+
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <span class="cv-entry-org">Freelance</span>
+                <span class="cv-entry-location">Remoto</span>
+            </div>
+            <div class="cv-entry-subheader">
+                <span class="cv-entry-role">Desarrollador Backend &mdash; Plataforma de Gestión Agrícola</span>
+                <span class="cv-entry-date">Febrero 2026 &ndash; Junio 2026</span>
+            </div>
+            <ul class="cv-bullets">
+                <li>Diseñé la arquitectura de datos en Firestore (NoSQL) para una plataforma de gestión de bitácoras y contratos de una plantación agrícola, con soporte offline-first y sincronización automática al recuperar conexión.</li>
+                <li>Implementé autenticación (Firebase Auth) y reglas de seguridad de acceso por rol (técnico de campo vs. administración) sobre Firestore y Storage.</li>
+                <li>Diseñé el modelo de datos compartido en tiempo real entre la captura en campo y el panel administrativo, evitando duplicación de datos o necesidad de una API intermedia.</li>
+                <li>Gestioné almacenamiento de archivos (firmas digitales, documentos) vía Firebase Storage y generación de reportes PDF/CSV.</li>
             </ul>
         </div>
 
         <div class="cv-entry">
             <div class="cv-entry-header">
                 <span class="cv-entry-org">Tenaris Tamsa</span>
-                <span class="cv-entry-location">Veracruz, Ver.</span>
+                <span class="cv-entry-location">Veracruz, Ver. &middot; Presencial</span>
             </div>
             <div class="cv-entry-subheader">
                 <span class="cv-entry-role">IT Service &amp; Support CA &ndash; Legacies</span>
                 <span class="cv-entry-date">Agosto 2024 &ndash; Agosto 2025</span>
             </div>
+            <div class="cv-entry-subheader" style="margin-top:.4rem">
+                <span class="cv-entry-role">Soporte a Aplicaciones Industriales (L1)</span>
+            </div>
             <ul class="cv-bullets">
-                <li>Soporte técnico en aplicaciones industriales de Natural en entornos UNIX/Linux.</li>
-                <li>Gestión y optimización de scripts SQL para mantenimiento de bases de datos.</li>
-                <li>Integración y despliegue mediante Azure DevOps: configuración de ramas, pipelines y despliegues a producción.</li>
-                <li>Desarrollo de dashboards en Power BI y apps internas con Power Apps y Power Automate.</li>
-                <li>Ejecución y monitoreo de procesos batch en Linux usando Bruno y Swagger.</li>
-                <li>Gestión de solicitudes de pedido, HES y liberación de documentos mediante SAP (Ciclo pasivo L1).</li>
+                <li>Soporte y mantenimiento de aplicaciones legacy desarrolladas en UNIX.</li>
+                <li>Soporte a aplicaciones full-stack construidas en .NET (backend) y JavaScript (frontend), revisando y validando flujos de trabajo end-to-end.</li>
+                <li>Desarrollo y mantenimiento de dashboards en Power BI para monitoreo de desempeño e indicadores operativos.</li>
+                <li>Solucion de problemas por medio de solicitudes de soporte Request/Incident/Problems de diferentes sistemas industriales [Oracle SQL, Unix, etc.]</li>
+            </ul>
+            <div class="cv-entry-subheader" style="margin-top:.7rem">
+                <span class="cv-entry-role">Soporte Funcional SAP (PP/MM)</span>
+            </div>
+            <ul class="cv-bullets">
+                <li>Solucion de problemas por medio de solicitudes de soporte (Request/Incident/Problems) dentro de SAP</li>
+                <li>Orientación y soporte a usuarios en los módulos PP (Production Planning) y MM (Material Management) de SAP.</li>
+                <li>Apoyo en la gestión y cancelación de órdenes de compra y venta, en un rol de soporte funcional.</li>
             </ul>
         </div>
 
@@ -121,11 +156,45 @@
     <!-- PROYECTOS -->
     <section class="cv-section">
         <h2 class="cv-section-title">Proyectos Destacados</h2>
-        <ul class="cv-bullets">
-            <li><em>Th3 CODE</em> &mdash; Sitio web multimedia, 2.º lugar en el Torneo Estatal de Prototipos Tecnológicos (2023).</li>
-            <li><em>Educakids</em> &mdash; Aplicación móvil educativa para aprendizaje infantil, presentada en Business TECXA (2022&ndash;2023).</li>
-            <li><em>SSP Veracruz</em> &mdash; Análisis y diseño de aplicación móvil financiada por la Secretaría de Seguridad Pública de Veracruz (2023&ndash;2024).</li>
-        </ul>
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <span class="cv-entry-org">Instituto Tecnológico Superior de Xalapa &mdash; Proyecto Interdisciplinario</span>
+                <span class="cv-entry-location">Xalapa, Ver.</span>
+            </div>
+            <div class="cv-entry-subheader">
+                <span class="cv-entry-role">Desarrollo de aplicación móvil &mdash; Beneficiario: Secretaría de Seguridad Pública de Veracruz</span>
+                <span class="cv-entry-date">Julio 2023 &ndash; Febrero 2024</span>
+            </div>
+            <ul class="cv-bullets">
+                <li>Desarrollé una aplicación móvil como parte de un proyecto interdisciplinario (Sistemas, Alimentaria, Industrial), presentando avances directamente en las instalaciones de la Secretaría de Seguridad Pública de Veracruz, beneficiaria del proyecto.</li>
+            </ul>
+        </div>
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <span class="cv-entry-org">Th3 CODE &mdash; Colaboración con Decode (Consultora, Xalapa)</span>
+                <span class="cv-entry-location">Xalapa, Ver.</span>
+            </div>
+            <div class="cv-entry-subheader">
+                <span class="cv-entry-role">Desarrollo de sitio web multimedia (tipo red profesional)</span>
+                <span class="cv-entry-date">Enero 2023 &ndash; Julio 2023</span>
+            </div>
+            <ul class="cv-bullets">
+                <li>Construí prototipos funcionales de un sitio web multimedia (tipo red profesional) en colaboración con Decode, consultora de Xalapa &mdash; 2.º lugar en el Torneo Estatal de Prototipos Tecnológicos (2023).</li>
+            </ul>
+        </div>
+        <div class="cv-entry">
+            <div class="cv-entry-header">
+                <span class="cv-entry-org">Educakids</span>
+                <span class="cv-entry-location">Xalapa, Ver.</span>
+            </div>
+            <div class="cv-entry-subheader">
+                <span class="cv-entry-role">Aplicación móvil educativa para aprendizaje infantil</span>
+                <span class="cv-entry-date">Julio 2022 &ndash; Junio 2023</span>
+            </div>
+            <ul class="cv-bullets">
+                <li>Presentada en Business TECXA.</li>
+            </ul>
+        </div>
     </section>
 
     <!-- CERTIFICACIONES -->
@@ -133,7 +202,7 @@
         <h2 class="cv-section-title">Certificaciones</h2>
         <ul class="cv-bullets">
             <li>Mastering AutoGen: Building Multi-Agent Systems &mdash; Udemy</li>
-            <li>Python OOP: Object Oriented Programming &mdash; Udemy</li>
+            <li>Python Object-Oriented Programming &mdash; Udemy</li>
             <li>Programación Backend con C# .NET &mdash; Udemy</li>
             <li>Scrum Fundamentals Certified &mdash; SCRUMstudy</li>
         </ul>
@@ -145,11 +214,11 @@
         <dl class="cv-skills">
             <div class="cv-skill-row">
                 <dt>Lenguajes</dt>
-                <dd>Python, C#, C++, .NET, SQL, Java</dd>
+                <dd>Python, C#/.NET, SQL</dd>
             </div>
             <div class="cv-skill-row">
                 <dt>IA &amp; Agentes</dt>
-                <dd>Sistemas Multi-Agente, MCP (Model Context Protocol), Microsoft Agent Framework (MAF), AutoGen, integración de LLMs</dd>
+                <dd>Sistemas Multi-Agente, MCP (Model Context Protocol), Microsoft Agent Framework (MAF), AutoGen, Langraph, LangChain, integración de LLMs</dd>
             </div>
             <div class="cv-skill-row">
                 <dt>Backend</dt>
@@ -157,19 +226,23 @@
             </div>
             <div class="cv-skill-row">
                 <dt>Bases de Datos</dt>
-                <dd>Oracle, MySQL, SQL Server, Natural/ADABAS</dd>
+                <dd>Oracle, PostgreSQL, MySQL, SQL Server, Cosmos DB, MongoDB, Natural/ADABAS</dd>
             </div>
             <div class="cv-skill-row">
                 <dt>Cloud &amp; DevOps</dt>
-                <dd>Azure (Blob Storage, OneLake), Azure DevOps, Git, CI/CD</dd>
+                <dd> Microsoft Fabric, Azure DevOps, Firebase, Git, CI/CD, Docker</dd>
             </div>
             <div class="cv-skill-row">
                 <dt>Power Platform</dt>
                 <dd>Power BI, Power Apps, Power Automate</dd>
             </div>
             <div class="cv-skill-row">
+                <dt>Mensajería &amp; Integración</dt>
+                <dd>Apache Kafka, Apache NiFi, Azure Service Bus</dd>
+            </div>
+            <div class="cv-skill-row">
                 <dt>Herramientas</dt>
-                <dd>Bruno, Swagger, SAP, DataStage, Apache NiFi</dd>
+                <dd>Bruno, Postman, SAP, SoapUI, GitHub</dd>
             </div>
             <div class="cv-skill-row">
                 <dt>Idiomas</dt>

@@ -20,7 +20,7 @@
 
   --page-max:   1300px;
   --page-pad-v: 3.5rem;
-  --page-pad-h: 5rem;
+  --page-pad-h: 3.5rem;
 }
 
 body.dark-theme {
@@ -227,6 +227,8 @@ body {
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
+  break-after: avoid;
+  page-break-after: avoid;
 }
 
 .cv-entry-org {
@@ -305,6 +307,7 @@ body {
 .cv-skill-row {
   display: flex;
   align-items: baseline;
+  gap: 1rem;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -335,23 +338,23 @@ body.scale-cv .page-wrapper { padding: 0; }
 body.scale-cv .resume {
   box-shadow: none;
   max-width: 100%;
-  padding: 1.8rem 2.2rem;
+  padding: 1.4rem 1.3rem;
 }
-body.scale-cv .cv-name              { font-size: 1.6rem; }
-body.scale-cv .cv-title             { font-size: .71rem; }
-body.scale-cv .cv-contact           { font-size: .73rem; }
-body.scale-cv .cv-section-title     { font-size: .75rem; }
-body.scale-cv .cv-entry-org         { font-size: .92rem; }
-body.scale-cv .cv-entry-role        { font-size: .86rem; }
+body.scale-cv .cv-name              { font-size: 1.55rem; }
+body.scale-cv .cv-title             { font-size: .68rem; }
+body.scale-cv .cv-contact           { font-size: .71rem; }
+body.scale-cv .cv-section-title     { font-size: .73rem; }
+body.scale-cv .cv-entry-org         { font-size: .9rem; }
+body.scale-cv .cv-entry-role        { font-size: .84rem; }
 body.scale-cv .cv-entry-location,
-body.scale-cv .cv-entry-date        { font-size: .69rem; }
-body.scale-cv .cv-summary           { font-size: .83rem; }
-body.scale-cv .cv-bullets li        { font-size: .81rem; margin-bottom: .1rem; }
-body.scale-cv .cv-skill-row         { font-size: .81rem; }
-body.scale-cv .cv-skill-row dt      { font-size: .69rem; min-width: 7.5rem; }
-body.scale-cv .cv-section           { margin-bottom: .9rem; }
-body.scale-cv .cv-entry             { margin-bottom: .72rem; }
-body.scale-cv .cv-rule              { margin: .65rem 0; }
+body.scale-cv .cv-entry-date        { font-size: .67rem; }
+body.scale-cv .cv-summary           { font-size: .8rem; }
+body.scale-cv .cv-bullets li        { font-size: .78rem; margin-bottom: .08rem; }
+body.scale-cv .cv-skill-row         { font-size: .78rem; gap: .7rem; }
+body.scale-cv .cv-skill-row dt      { font-size: .67rem; min-width: 7rem; }
+body.scale-cv .cv-section           { margin-bottom: .75rem; }
+body.scale-cv .cv-entry             { margin-bottom: .55rem; }
+body.scale-cv .cv-rule              { margin: .55rem 0; }
 
 @page { size: A4; margin: 10mm; }
 
